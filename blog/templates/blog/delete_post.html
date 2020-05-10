@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="content-section">
+        <form action="" method="POST">
+            {% csrf_token %}
+             <fieldset>
+                <legend class="border-bottom md-5">
+                    Update Post
+                </legend>
+                <div class="form-group">
+                    <h3> Are you sure you want to delete post "{{ object.title }}" </h3>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-danger"> Yes, Delete </button>
+                <a class="btn btn-outline-secondary" href="{% url 'blog-home' %}"> Home </a>
+            </div>
+        </form>
+    </div>
+{% endblock content%}

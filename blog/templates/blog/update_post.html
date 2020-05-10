@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form action="" method="POST">
+            {% csrf_token %}
+             <fieldset>
+                <legend class="border-bottom md-5">
+                    Update Post
+                </legend>
+                <div class="form-group">
+                    {{ form|crispy }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-info"> Update Post </button>
+            </div>
+        </form>
+    </div>
+{% endblock content%}
